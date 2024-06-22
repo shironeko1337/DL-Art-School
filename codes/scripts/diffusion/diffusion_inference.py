@@ -44,7 +44,7 @@ if __name__ == '__main__':
     parser.add_argument('--sr_factor', type=int, help='Multiplicative amount to super-resolve the image; [1,4]', default=2)
     parser.add_argument('--diffusion_steps', type=int, help='Number of diffusion steps. Lower is faster, higher makes higher quality images. >400 is unnecessary. [0,4000]', default=100)
     parser.add_argument('--output', type=str, help='Where to store output image', default='.')
-    parser.add_argument('--device', type=str, help='Device to perform inference on; cpu or cuda', default='cuda')
+    parser.add_argument('--device', type=str, help='Device to perform inference on; cpu or cuda', default='cpu') # xxx
     args = parser.parse_args()
 
     os.makedirs(args.output, exist_ok=True)
